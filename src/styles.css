@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#homepage-header {
+    height: 100vh;
+    width: 100vw;
+    padding: 2vw;
+    background: url('./homepage.jpg') no-repeat fixed center/cover;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    color: #fff;
+    justify-content: center;
+    gap: 10vw;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(8px, 7.5vw, 30px);
+    color: #ba704f;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ba704f;
+    transition: transform 0.2s ease-out;
+}
+
+nav ul li a:hover::after{
+    transform: scaleX(1);
+}
+
+.container-welcome {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin-top: 10%;
+
+    /* From https://css.glass */
+    background: rgba(72, 68, 68, 0.19);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.3px);
+    -webkit-backdrop-filter: blur(7.3px);
+}
+
+.container-welcome h1 {
+    font-size: clamp(50px, 15vw, 180px);
+    font-family: 'Oswald', sans-serif;
+    color: #ba704f;
+    padding-left: 10px;
+}
+
+.container-welcome .intro {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(8px, 7.5vw, 20px);
+    color: #fff;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+button#bookTable {
+    margin-top: 2vw;
+    padding: 15px 60px;
+    color: #fff;
+    background-color: #ba704f;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    width: fit-content;
+    transition: all 0.25s;
+}
+
+button#bookTable:hover {
+    background-color: #dfa878;
+    color: #000;
+    cursor: pointer;
+}
