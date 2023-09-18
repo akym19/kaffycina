@@ -25,20 +25,48 @@ export const homepage = () => {
 
     const ul = createElem('ul', {});
 
-    const liHome = createElem('li', {
+    const liLogo = createElem('li', {
+        id: 'logo'
+    });
+    const aLogo = createElem('a', {
         href: '#'
     });
-    liHome.textContent = 'Home';
+
+    const imgLogo = new Image();
+    imgLogo.src = '../src/logo.jpg'
+
+    const liHome = createElem('li', {
+        id: "home"
+    });
+    const aHome = createElem('a', {
+        href: '#'
+    })
+    aHome.textContent = 'Home';
 
     const liMenu = createElem('li', {
-        href: '#'
+        id: "menu"
     });
-    liMenu.textContent = 'Menu';
+    const aMenu = createElem('a', {
+        href: '#'
+    })
+    aMenu.textContent = 'Menu';
 
     const liContact = createElem('li', {
-        href: '#'
+        id: "contact"
     });
-    liContact.textContent = 'Contact Us';
+    const aContact = createElem('a', {
+        href: '#'
+    })
+    aContact.textContent = 'Contact Us';
+
+    const liOnlineOrder = createElem('li', {
+        id: "onlineOrder"
+    });
+    const aOnlineOrder = createElem('a', {
+        href: '#'
+    })
+    const orderBtn = createElem('button', {});
+    orderBtn.textContent = "Order Online";
 
     const welcome = createElem('div', {
         class: 'container-welcome'
@@ -60,9 +88,20 @@ export const homepage = () => {
     welcome.appendChild(title);
     welcome.appendChild(intro);
 
+    aLogo.appendChild(imgLogo);
+    aOnlineOrder.appendChild(orderBtn);
+    
+    liLogo.appendChild(aLogo);
+    liHome.appendChild(aHome);
+    liMenu.appendChild(aMenu);
+    liContact.appendChild(aContact);
+    liOnlineOrder.appendChild(aOnlineOrder);
+
+    ul.appendChild(liLogo);
     ul.appendChild(liHome);
     ul.appendChild(liMenu);
     ul.appendChild(liContact);
+    ul.appendChild(liOnlineOrder);
 
     nav.appendChild(ul);
 
