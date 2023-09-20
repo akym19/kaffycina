@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #684711;
+    --dark-font: #0c0c0f;
+    --white-font: #f5f5fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: solid 1px black; */
+}
+
+nav {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: var(--dark-font);
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    color: var(--white-font);
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+}
+
+nav ul li#onlineOrder {
+    margin-left: auto;
+}
+
+nav ul li button {
+    padding: 15px 30px;
+    color: var(--white-font);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(8px, 7.5vw, 25px);
+    font-weight: 700;
+    width: fit-content;
+    transition: all 0.25s;
+}
+
+nav ul li button:hover {
+    background-color: var(--white-font);
+    color: var(--dark-font);
+    cursor: pointer;
+}
+
+nav ul li#logo img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+nav ul li#logo {
+    margin-right: auto;
+}
+
+nav ul li a {
+    color: var(--white-font);
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(8px, 7.5vw, 25px);
+    color: var(--white-font);
+    position: relative;
+}
+
+nav ul li:nth-child(n+2):nth-child(-n+4) a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: -10px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: transform 0.2s ease-out;
+}
+
+nav ul li:nth-child(n+2):nth-child(-n+4) a:hover::after{
+    transform: scaleX(1);
+}
+
+.section:nth-child(odd) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "menu-img menu-card blank";
+}
+
+.section:nth-child(even) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "blank menu-card menu-img";
+}
+
+.menu-img {
+    grid-area: menu-img;
+}
+
+.menu-card {
+    grid-area: menu-card;
+}
+
+#blank {
+    grid-area: blank;
+}
+
+.menu-img {
+    width: fit-content;
+}
+
+.menu-img img {
+    width: 600px;
+}

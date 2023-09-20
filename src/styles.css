@@ -2,6 +2,8 @@
 
 :root {
     --primary-color: #684711;
+    --dark-font: #0c0c0f;
+    --white-font: #f5f5fa;
 }
 
 * {
@@ -11,19 +13,28 @@
     /* outline: solid 1px black; */
 }
 
-#homepage-header {
+body {
     height: 100vh;
     width: 100vw;
+    background: url('./homepage.jpg') no-repeat fixed center/cover;
+}
+
+#homepage-header {
     padding-left: 1vw;
     padding-right: 1vw;
     padding-top: 10px;
-    background: url('./homepage.jpg') no-repeat fixed center/cover;
+}
+
+nav {
+    padding-left: 10px;
+    padding-right: 10px;
+    background: rgba(24, 18, 18, 0.19);
 }
 
 nav ul {
     display: flex;
     list-style-type: none;
-    color: #fff;
+    color: var(--white-font);
     justify-content: center;
     align-items: center;
     gap: 10vw;
@@ -35,7 +46,7 @@ nav ul li#onlineOrder {
 
 nav ul li button {
     padding: 15px 30px;
-    color: #fff;
+    color: var(--white-font);
     background-color: var(--primary-color);
     border: none;
     border-radius: 30px;
@@ -47,8 +58,8 @@ nav ul li button {
 }
 
 nav ul li button:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--white-font);
+    color: var(--dark-font);
     cursor: pointer;
 }
 
@@ -62,11 +73,11 @@ nav ul li#logo {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--white-font);
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
     font-size: clamp(8px, 7.5vw, 25px);
-    color: #fff;
+    color: var(--white-font);
     position: relative;
 }
 
@@ -113,7 +124,7 @@ nav ul li:nth-child(n+2):nth-child(-n+4) a:hover::after{
 .container-welcome .intro {
     font-family: 'Roboto', sans-serif;
     font-size: clamp(8px, 7.5vw, 20px);
-    color: #fff;
+    color: var(--white-font);
     text-align: justify;
     padding-left: 15px;
     padding-right: 15px;
@@ -124,7 +135,7 @@ nav ul li:nth-child(n+2):nth-child(-n+4) a:hover::after{
 button#bookTable {
     margin-top: 2vw;
     padding: 15px 60px;
-    color: #fff;
+    color: var(--white-font);
     background-color: var(--primary-color);
     border: none;
     border-radius: 30px;
@@ -136,7 +147,7 @@ button#bookTable {
 }
 
 button#bookTable:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--white-font);
+    color: var(--dark-font);
     cursor: pointer;
 }

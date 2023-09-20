@@ -21,7 +21,9 @@ export const homepage = () => {
         id: 'homepage-header'
     });
 
-    const nav = createElem('nav', {});
+    const nav = createElem('nav', {
+        id: "navbar"
+    });
 
     const ul = createElem('ul', {});
 
@@ -105,11 +107,11 @@ export const homepage = () => {
 
     nav.appendChild(ul);
 
-    header.appendChild(nav);
     header.appendChild(welcome);
     header.appendChild(bookBtn);
 
-    content.appendChild(header);
+    content.appendChild(nav);
+    content.append(header);
 
     document.body.appendChild(content);
 }
