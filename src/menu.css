@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Oswald:wght@700&family=Roboto&display=swap');
 
 :root {
     --primary-color: #684711;
@@ -10,7 +10,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: solid 1px black; */
 }
 
 nav {
@@ -92,6 +91,18 @@ nav ul li:nth-child(n+2):nth-child(-n+4) a:hover::after{
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
     "menu-img menu-card blank";
+    justify-items: center;
+    align-items: center;
+}
+
+#soups_salads .menu-img,
+#pizza .menu-img {
+    justify-self: end;
+}
+
+#appetizers .menu-img,
+#pasta .menu-img {
+    justify-self: start;
 }
 
 .section:nth-child(even) {
@@ -99,6 +110,12 @@ nav ul li:nth-child(n+2):nth-child(-n+4) a:hover::after{
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
     "blank menu-card menu-img";
+    justify-items: center;
+    align-items: center;
+}
+
+.section:not(:first-child) {
+    margin-top: 100px;
 }
 
 .menu-img {
@@ -114,9 +131,56 @@ nav ul li:nth-child(n+2):nth-child(-n+4) a:hover::after{
 }
 
 .menu-img {
-    width: fit-content;
+    width: fit-content;  
+    align-self: start;
 }
 
 .menu-img img {
-    width: 600px;
+    width: 500px;
+}
+
+.menu-card h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+}
+
+.food-card {
+    padding: 35px 0;
+    border-top: solid 2px var(--primary-color);
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
+}
+
+.price {
+    margin-left: auto;
+    align-self: center;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 700; 
+    font-size: 35px;
+}
+
+/* * {
+    outline: solid 1px black;
+} */
+
+.food-card:last-child {
+    border-bottom: solid 2px var(--primary-color);
+}
+
+.food h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+
+.food p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to three lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
