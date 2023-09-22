@@ -1,5 +1,5 @@
 import { homepage } from "./home";
 import './styles.css';
-import logo from './logo.jpg';
+import logo from './images/logo.jpg';
 
 homepage();

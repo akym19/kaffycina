@@ -16,7 +16,7 @@
 body {
     height: 100vh;
     width: 100vw;
-    background: url('./homepage.jpg') no-repeat fixed center/cover;
+    background: url('./images/homepage.jpg') no-repeat fixed center/cover;
 }
 
 #homepage-header {
@@ -45,7 +45,7 @@ nav ul li#onlineOrder {
 }
 
 nav ul li button {
-    padding: 15px 30px;
+    padding: 10px 20px;
     color: var(--white-font);
     background-color: var(--primary-color);
     border: none;
@@ -64,7 +64,7 @@ nav ul li button:hover {
 }
 
 nav ul li#logo img {
-    height: 100px;
+    height: 80px;
     border-radius: 50%;
 }
 

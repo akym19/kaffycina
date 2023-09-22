@@ -1,6 +1,3 @@
-console.log('This is the start');
-
-
 export const homepage = () => {
     const introcontent = "Indulge in a symphony of flavors at our one-of-a-kind restaurant, where every bite is a delightful journey. At Kaffycina, we are passionate about crafting exquisite dishes that tantalize your taste buds and leave you craving for more. Whether you're a fan of Pasta, Chicken, Salad, or Desserts, we have something special waiting just for you.";
     const resName = "KAFFYCINA";
@@ -35,7 +32,7 @@ export const homepage = () => {
     });
 
     const imgLogo = new Image();
-    imgLogo.src = '../src/logo.jpg'
+    imgLogo.src = '../src/images/logo.jpg'
 
     const liHome = createElem('li', {
         id: "home"

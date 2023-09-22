@@ -12,23 +12,31 @@
         <nav id="navbar">
             <ul>
                 <li id="logo"><a href="#">
-                    <img src="../src/logo.jpg" alt="Kaffycina Logo">
+                    <img src="../src/images/logo.jpg" alt="Kaffycina Logo">
                 </a></li>
                 <li id="home"><a href="#">Home</a></li>
                 <li id="menu"><a href="#">Menu</a></li>
                 <li id="contact"><a href="#">Contact Us</a></li>
-                <li id="onlineOrder"><a href="#"><button>
-                    Order Online
-                </button></a></li>
+                <li id="onlineOrder">
+                    <a href="#">
+                        <button>Order Online</button>
+                    </a>
+                </li>
             </ul>
         </nav>
         <div id="menu">
+
             <div id="appetizers" class="section">
                 <div id="appe-img" class="menu-img">
-                    <img src="../src/bruschetta.jpg" alt="Bruschetta" loading="lazy">
+                    <img src="../src/images/bruschetta.jpg" alt="Bruschetta" loading="lazy">
                 </div>
                 <div id="appe-menu" class="menu-card">
-                    <h1>Appetizers</h1>
+                    <div id="appe-heading" class="menu-heading">
+                        <div id="appe-illus" class="menu-illus">
+                            <img src="../src/images/breads.png" alt="Appetizers Illustration">
+                        </div>
+                        <h1>Appetizers</h1>
+                    </div>
                     <div class="food-card appe-card">
                         <div class="food">
                             <h2 class="name">Bruschetta</h2>
@@ -69,12 +77,18 @@
                     
                 </div>
             </div>
+
             <div id="soups_salads" class="section">
                 <div id="blank">
                     
                 </div>
                 <div id="sousa-menu" class="menu-card">
-                    <h1>Soups and Salads</h1>
+                    <div id="sousa-heading" class="menu-heading">
+                        <div id="sousa-illus" class="menu-illus">
+                            <img src="../src/images/salad.png" alt="Salad Illustration">
+                        </div>
+                        <h1>Soups and Salads</h1>
+                    </div>
                     <div class="food-card sousa-card">
                         <div class="food">
                             <h2 class="name">Tuscany</h2>
@@ -112,15 +126,21 @@
                     </div>
                 </div>
                 <div id="sousa-img" class="menu-img">
-                    <img src="../src/sousa.jpg" alt="Salad" loading="lazy">
+                    <img src="../src/images/sousa.jpg" alt="Salad" loading="lazy">
                 </div>
             </div>
+
             <div id="pasta" class="section">
                 <div id="pasta-img" class="menu-img">
-                    <img src="../src/pasta.jpg" alt="Pasta" loading="lazy">
+                    <img src="../src/images/pasta.jpg" alt="Pasta" loading="lazy">
                 </div>
                 <div id="pasta-menu" class="menu-card">
-                    <h1>Pasta</h1>
+                    <div id="pasta-heading" class="menu-heading">
+                        <div id="pasta-illus" class="menu-illus">
+                            <img src="../src/images/spaghetti.png" alt="Pasta Illustration">
+                        </div>
+                        <h1>Pasta</h1>
+                    </div>
                     <div class="food-card pasta-card">
                         <div class="food">
                             <h2 class="name">Bolognese</h2>
@@ -161,15 +181,21 @@
                     
                 </div>
             </div>
+
             <div id="pizza" class="section">
                 <div id="blank">
                     
                 </div>
                 <div id="pizza-menu" class="menu-card">
-                    <h1>Pizza</h1>
+                    <div id="pizza-heading" class="menu-heading">
+                        <div id="pizza-illus" class="menu-illus">
+                            <img src="../src/images/pizza.png" alt="Pizza Illustration">
+                        </div>
+                        <h1>Pizza</h1>
+                    </div>
                     <div class="food-card pizza-card">
                         <div class="food">
-                            <h2 class="name">Pepperony & Basil</h2>
+                            <h2 class="name">Pepperoni  & Basil</h2>
                             <p class="desc">Ezzo's pepperoni, burrata, basil, red sauce.</p>
                         </div>
                         <p class="price">$17.25</p>
@@ -204,9 +230,10 @@
                     </div>
                 </div>
                 <div id="pizza-img" class="menu-img">
-                    <img src="../src/pizza.jpg" alt="Pizza" loading="lazy">
+                    <img src="../src/images/pizza.jpg" alt="Pizza" loading="lazy">
                 </div>
             </div>
+
         </div>
     </div>
 </body>
