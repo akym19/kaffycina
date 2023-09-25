@@ -94,7 +94,7 @@ nav ul li:nth-child(n+2):nth-child(-n+4) a:hover::after{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
-    "menu-img menu-card blank";
+    "menu-img menu-card ....";
     justify-items: center;
     align-items: center;
 }
@@ -113,7 +113,7 @@ nav ul li:nth-child(n+2):nth-child(-n+4) a:hover::after{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
-    "blank menu-card menu-img";
+    ".... menu-card menu-img";
     justify-items: center;
     align-items: center;
 }
