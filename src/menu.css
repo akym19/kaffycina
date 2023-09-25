@@ -140,8 +140,8 @@ nav ul li:nth-child(n+2):nth-child(-n+4) a:hover::after{
 }
 
 .menu-img img {
-    height: 90vh;
-    width: auto;
+    width: 30vw;
+    height: auto;
 }
 
 .menu-card h1 {
