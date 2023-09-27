@@ -1,17 +1,4 @@
-const createElem = (type, attributes = {}) => {
-    const elem = document.createElement(type);
-
-    for (const attr in attributes) {
-        if (attributes.hasOwnProperty(attr)) {
-            elem.setAttribute(attr, attributes[attr]);
-        }
-    }
-    return elem;
-};
-
-const appendToParent = (parent, child) => {
-    parent.appendChild(child);
-}
+import { createElem, appendToParent } from "./home.js";
 
 const sections = [
     {
@@ -268,4 +255,7 @@ sections.forEach((section) => {
     appendToParent(menu, sectionElem)
 })
 
-appendToParent(content, menu)
+export const generateMenu = () => {
+    content.textContent = "";
+    appendToParent(content, menu);
+}

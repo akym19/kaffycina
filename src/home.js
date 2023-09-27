@@ -1,4 +1,4 @@
-const createElem = (type, attributes ={}) => {
+export const createElem = (type, attributes ={}) => {
     const elem = document.createElement(type);
 
     for (const attr in attributes) {
@@ -9,10 +9,19 @@ const createElem = (type, attributes ={}) => {
     return elem;
 };
 
+export const appendToParent = (parent, child) => {
+    parent.appendChild(child);
+}
+
+const content = document.getElementById('content');
+
 const homepage = () => {
     const introcontent = "Indulge in a symphony of flavors at our one-of-a-kind restaurant, where every bite is a delightful journey. At Kaffycina, we are passionate about crafting exquisite dishes that tantalize your taste buds and leave you craving for more. Whether you're a fan of Pasta, Chicken, Salad, or Desserts, we have something special waiting just for you.";
     const resName = "KAFFYCINA";
-    const content = document.getElementById('content');
+
+    const home = createElem('div', {
+        id: "home-container"
+    })
 
     const header = createElem('div', {
         id: 'homepage-header'
@@ -35,15 +44,18 @@ const homepage = () => {
     });
     bookBtn.textContent = 'Book A Table';
 
-    welcome.appendChild(title);
-    welcome.appendChild(intro);
+    appendToParent(welcome, title);
+    appendToParent(welcome, intro);
 
-    header.appendChild(welcome);
-    header.appendChild(bookBtn);
+    appendToParent(header, welcome)
+    appendToParent(header, bookBtn)
 
-    content.append(header);
+    appendToParent(home, header)
 
-    document.body.appendChild(content);
+    appendToParent(content, home)
 }
 
-export {homepage}
+export const generateHomepage = () => {
+    content.textContent = "";
+    homepage();
+}
