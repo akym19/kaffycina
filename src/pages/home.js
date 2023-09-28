@@ -1,21 +1,10 @@
-export const createElem = (type, attributes ={}) => {
-    const elem = document.createElement(type);
-
-    for (const attr in attributes) {
-        if (attributes.hasOwnProperty(attr)) {
-            elem.setAttribute(attr, attributes[attr]);
-        }
-    }
-    return elem;
-};
-
-export const appendToParent = (parent, child) => {
-    parent.appendChild(child);
-}
-
-const content = document.getElementById('content');
+import { createElem } from "../functions";
 
 const homepage = () => {
+    const body = document.body;
+    const content = createElem('div', {
+        id: "content"
+    });
     const introcontent = "Indulge in a symphony of flavors at our one-of-a-kind restaurant, where every bite is a delightful journey. At Kaffycina, we are passionate about crafting exquisite dishes that tantalize your taste buds and leave you craving for more. Whether you're a fan of Pasta, Chicken, Salad, or Desserts, we have something special waiting just for you.";
     const resName = "KAFFYCINA";
 
@@ -44,18 +33,28 @@ const homepage = () => {
     });
     bookBtn.textContent = 'Book A Table';
 
-    appendToParent(welcome, title);
-    appendToParent(welcome, intro);
+    // appendToParent(welcome, title);
+    // appendToParent(welcome, intro);
 
-    appendToParent(header, welcome)
-    appendToParent(header, bookBtn)
+    // appendToParent(header, welcome)
+    // appendToParent(header, bookBtn)
 
-    appendToParent(home, header)
+    // appendToParent(home, header)
 
-    appendToParent(content, home)
+    // appendToParent(content, home)
+
+    welcome.appendChild(title);
+    welcome.appendChild(intro);
+
+    header.appendChild(welcome);
+    header.appendChild(bookBtn);
+
+    home.appendChild(header);
+
+    content.appendChild(home);
+    body.appendChild(content)
 }
 
 export const generateHomepage = () => {
-    content.textContent = "";
     homepage();
 }

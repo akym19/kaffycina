@@ -1,4 +1,4 @@
-import { createElem, appendToParent } from "./home.js";
+import { createElem, appendToParent } from "../functions";
 
 const sections = [
     {
@@ -177,15 +177,23 @@ const generateFoodCards = (foodArray) => {
         });
         descElem.textContent = food.desc;
 
-        appendToParent(foodElem, nameElem);
-        appendToParent(foodElem, descElem);
+        // appendToParent(foodElem, nameElem);
+        // appendToParent(foodElem, descElem);
+
+        foodElem.appendChild(nameElem);
+        foodElem.appendChild(descElem);
+
 
         const priceElem = createElem('p', {
             class: "price"
         });
 
-        appendToParent(foodCardElem, foodElem);
-        appendToParent(foodCardElem, priceElem);
+        // appendToParent(foodCardElem, foodElem);
+        // appendToParent(foodCardElem, priceElem);
+
+        foodCardElem.appendChild(foodElem);
+        foodCardElem.appendChild(priceElem);
+
 
         foodCards.push(foodCardElem);
     }
@@ -193,69 +201,87 @@ const generateFoodCards = (foodArray) => {
     return foodCards;
 };
 
-const content = document.getElementById("content");
-const menu = createElem('div', {
-    id: "menu-container"
-});
-
-sections.forEach((section) => {
-    const sectionElem = createElem('div', {
-        id:section.id,
-        class: "section"
+const generateSections = () => {
+    const body = document.body;
+    const content = createElem('div', {
+        id: "content"
+    });
+    const menu = createElem('div', {
+        id: "menu-container"
     });
 
-    const menuSideImgDiv = createElem('div', {
-        id: `${section.id}-img`,
-        class: "menu-img"
-    });
-
-    const menuSideImg = createElem('img', {
-        src: section.sideImg,
-        alt: section.name,
-        loading: "lazy"
-    });
-
-    const menuCard = createElem('div', {
-        id: `${section.id}-menu`,
-        class: "menu-card"
-    });
-
-    const menuHeading = createElem('div', {
-        id: `${section.id}-heading`
-    });
-
-    const menuIllus = createElem('div', {
-        class: "menu-illus"
-    });
-
-    const menuImg = createElem('div', {
-        src: section.headingImg,
-        alt: `${section.name} Illustration`,
-        loading: "lazy"
-    });
-
-    const menuH1 = createElem('h1', {});
-    menuH1.textContent = section.name;
-
-    const foodArray = generateFoodCards(section.items);
-
-    appendToParent(menuIllus, menuImg);
-    appendToParent(menuHeading, menuIllus);
-    appendToParent(menuHeading, menuH1);
-    appendToParent(menuCard, menuHeading);
-
-    foodArray.forEach((food) => {
-        appendToParent(menuCard, food);
-    });
-
-    appendToParent(menuSideImgDiv, menuSideImg);
-    appendToParent(sectionElem, menuSideImgDiv);
-    appendToParent(sectionElem, menuCard);
-
-    appendToParent(menu, sectionElem)
-})
+    sections.forEach((section) => {
+        const sectionElem = createElem('div', {
+            id:section.id,
+            class: "section"
+        });
+    
+        const menuSideImgDiv = createElem('div', {
+            id: `${section.id}-img`,
+            class: "menu-img"
+        });
+    
+        const menuSideImg = createElem('img', {
+            src: section.sideImg,
+            alt: section.name,
+            loading: "lazy"
+        });
+    
+        const menuCard = createElem('div', {
+            id: `${section.id}-menu`,
+            class: "menu-card"
+        });
+    
+        const menuHeading = createElem('div', {
+            id: `${section.id}-heading`
+        });
+    
+        const menuIllus = createElem('div', {
+            class: "menu-illus"
+        });
+    
+        const menuImg = createElem('div', {
+            src: section.headingImg,
+            alt: `${section.name} Illustration`,
+            loading: "lazy"
+        });
+    
+        const menuH1 = createElem('h1', {});
+        menuH1.textContent = section.name;
+    
+        const foodArray = generateFoodCards(section.items);
+    
+        // appendToParent(menuIllus, menuImg);
+        // appendToParent(menuHeading, menuIllus);
+        // appendToParent(menuHeading, menuH1);
+        // appendToParent(menuCard, menuHeading);
+    
+        menuIllus.appendChild(menuImg);
+        menuHeading.appendChild(menuIllus);
+        menuHeading.appendChild(menuH1);
+        menuCard.appendChild(menuHeading);
+    
+        foodArray.forEach((food) => {
+            // appendToParent(menuCard, food);
+            menuCard.appendChild(food);
+        });
+    
+        // appendToParent(menuSideImgDiv, menuSideImg);
+        // appendToParent(sectionElem, menuSideImgDiv);
+        // appendToParent(sectionElem, menuCard);
+    
+        // appendToParent(menu, sectionElem);
+        
+        menuSideImgDiv.appendChild(menuSideImg);
+        sectionElem.appendChild(menuSideImgDiv);
+        sectionElem.appendChild(menuCard);
+    
+        menu.appendChild(sectionElem);
+        content.appendChild(menu);
+        body.appendChild(content)
+    })
+}
 
 export const generateMenu = () => {
-    content.textContent = "";
-    appendToParent(content, menu);
+    generateSections();
 }
