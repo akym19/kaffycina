@@ -1,4 +1,4 @@
-import { createElem, appendToParent } from "../functions";
+import { createElem } from "../functions";
 
 const sections = [
     {
@@ -7,6 +7,12 @@ const sections = [
         sideImg: "../src/images/bruschetta.jpg",
         headingImg: "../src/images/breads.png",
         items: [
+            {
+                class: "appe-card",
+                name: "Mung Bean Sprout Rolls",
+                desc: "Crispy rolls with mung bean sprouts, veggies, and dipping sauce.",
+                price: "$7.99"
+            },
             {
                 class: "appe-card",
                 name: "Bruschetta",
@@ -41,10 +47,16 @@ const sections = [
     },
     {
         id: "soups_salads",
-        name: "Appetizers",
+        name: "Soups & Salads",
         sideImg: "../src/images/sousa.jpg",
         headingImg: "../src/images/salad.png",
         items: [
+            {
+                class: "sousa-card",
+                name: "Kani Salad",
+                desc: "Crab stick salad with cucumbers and greens, ripe mango, served with homemade dressing.",
+                price: "$9.45"
+            },
             {
                 class: "sousa-card",
                 name: "Tuscany",
@@ -83,6 +95,18 @@ const sections = [
         sideImg: "../src/images/pasta.jpg",
         headingImg: "../src/images/spaghetti.png",
         items: [
+            {
+                class: "pasta-card",
+                name: "Bacon Carbonara",
+                desc: "Creamy pasta with bacon, cheese, and creamy sauce.",
+                price: "$12.99"
+            },
+            {
+                class: "pasta-card",
+                name: "Pasta Al Telefono",
+                desc: "Classic Italian pasta dish with fresh mozzarella, tomato sauce and basil leaves.",
+                price: "$14.50"
+            },
             {
                 class: "pasta-card",
                 name: "Bolognese",
@@ -177,9 +201,6 @@ const generateFoodCards = (foodArray) => {
         });
         descElem.textContent = food.desc;
 
-        // appendToParent(foodElem, nameElem);
-        // appendToParent(foodElem, descElem);
-
         foodElem.appendChild(nameElem);
         foodElem.appendChild(descElem);
 
@@ -187,9 +208,7 @@ const generateFoodCards = (foodArray) => {
         const priceElem = createElem('p', {
             class: "price"
         });
-
-        // appendToParent(foodCardElem, foodElem);
-        // appendToParent(foodCardElem, priceElem);
+        priceElem.textContent = food.price;
 
         foodCardElem.appendChild(foodElem);
         foodCardElem.appendChild(priceElem);
@@ -212,69 +231,57 @@ const generateSections = () => {
 
     sections.forEach((section) => {
         const sectionElem = createElem('div', {
-            id:section.id,
+            id: section.id,
             class: "section"
         });
     
-        const menuSideImgDiv = createElem('div', {
+        const sectionSideImgDiv = createElem('div', {
             id: `${section.id}-img`,
             class: "menu-img"
         });
     
-        const menuSideImg = createElem('img', {
+        const sectionSideImg = createElem('img', {
             src: section.sideImg,
             alt: section.name,
             loading: "lazy"
         });
     
-        const menuCard = createElem('div', {
+        const sectionCard = createElem('div', {
             id: `${section.id}-menu`,
             class: "menu-card"
         });
     
-        const menuHeading = createElem('div', {
+        const sectionHeading = createElem('div', {
             id: `${section.id}-heading`
         });
     
-        const menuIllus = createElem('div', {
+        const sectionIllus = createElem('div', {
             class: "menu-illus"
         });
     
-        const menuImg = createElem('div', {
+        const sectionImg = createElem('img', {
             src: section.headingImg,
             alt: `${section.name} Illustration`,
             loading: "lazy"
         });
     
-        const menuH1 = createElem('h1', {});
-        menuH1.textContent = section.name;
+        const sectionH1 = createElem('h1', {});
+        sectionH1.textContent = section.name;
     
         const foodArray = generateFoodCards(section.items);
     
-        // appendToParent(menuIllus, menuImg);
-        // appendToParent(menuHeading, menuIllus);
-        // appendToParent(menuHeading, menuH1);
-        // appendToParent(menuCard, menuHeading);
-    
-        menuIllus.appendChild(menuImg);
-        menuHeading.appendChild(menuIllus);
-        menuHeading.appendChild(menuH1);
-        menuCard.appendChild(menuHeading);
+        sectionIllus.appendChild(sectionImg);
+        sectionHeading.appendChild(sectionIllus);
+        sectionHeading.appendChild(sectionH1);
+        sectionCard.appendChild(sectionHeading);
     
         foodArray.forEach((food) => {
-            // appendToParent(menuCard, food);
-            menuCard.appendChild(food);
+            sectionCard.appendChild(food);
         });
-    
-        // appendToParent(menuSideImgDiv, menuSideImg);
-        // appendToParent(sectionElem, menuSideImgDiv);
-        // appendToParent(sectionElem, menuCard);
-    
-        // appendToParent(menu, sectionElem);
         
-        menuSideImgDiv.appendChild(menuSideImg);
-        sectionElem.appendChild(menuSideImgDiv);
-        sectionElem.appendChild(menuCard);
+        sectionSideImgDiv.appendChild(sectionSideImg);
+        sectionElem.appendChild(sectionSideImgDiv);
+        sectionElem.appendChild(sectionCard);
     
         menu.appendChild(sectionElem);
         content.appendChild(menu);
@@ -283,5 +290,6 @@ const generateSections = () => {
 }
 
 export const generateMenu = () => {
+    document.title = "Kaffycina Menu";
     generateSections();
 }

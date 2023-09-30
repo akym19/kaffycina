@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Oswald:wght@700&family=Roboto&display=swap');
 
 :root {
     --primary-color: #684711;
@@ -10,20 +11,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: solid 1px black; */
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     height: 100vh;
-    width: 100vw;
+    width: auto;
     background: url('../images/homepage.jpg') no-repeat fixed center/cover;
 }
 
-#homepage-header {
-    padding-left: 1vw;
-    padding-right: 1vw;
-    padding-top: 10px;
-}
+/* NAVIGATION BAR STYLES */
 
 nav {
     padding-left: 10px;
@@ -99,14 +99,20 @@ nav ul li:nth-child(n+2):nth-child(-n+4) a:hover::after{
     transform: scaleX(1);
 }
 
+/* HOMEPAGE STYLES */
+
+#homepage-header {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 10px;
+}
+
 .container-welcome {
     display: flex;
     flex-direction: column;
     width: 50vw;
     margin-top: 10%;
     position: relative;
-
-    /* From https://css.glass */
     background: rgba(72, 68, 68, 0.19);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -152,4 +158,105 @@ button#bookTable:hover {
     background-color: var(--white-font);
     color: var(--dark-font);
     cursor: pointer;
+}
+
+/* MENU PAGE STYLES */
+
+.section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.section:nth-child(odd) {
+    grid-template-areas: 
+    "menu-img menu-card ....";
+}
+
+.section:nth-child(odd) > .menu-img {
+    justify-self: start;
+}
+
+.section:nth-child(even) {
+    grid-template-areas: 
+    ".... menu-card menu-img";
+}
+
+.section:nth-child(even) > .menu-img {
+    justify-self: end;
+}
+
+.section:not(:first-child) {
+    margin-top: 100px;
+}
+
+.menu-img {
+    grid-area: menu-img;
+}
+
+.menu-card {
+    grid-area: menu-card;
+}
+
+.menu-img {
+    width: fit-content;  
+    align-self: start;
+}
+
+.menu-img img {
+    width: 30vw;
+    height: auto;
+}
+
+.menu-card h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+}
+
+.menu-illus{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.menu-illus img {
+    width: 150px;
+}
+
+.food-card {
+    padding: 35px 0;
+    border-top: solid 2px var(--primary-color);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+}
+
+.price {
+    margin-left: auto;
+    align-self: center;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 700; 
+    font-size: 35px;
+}
+
+.food-card:last-child {
+    border-bottom: solid 2px var(--primary-color);
+}
+
+.food h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+
+.food p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.pizza-card:last-child {
+    border-bottom: none;
 }

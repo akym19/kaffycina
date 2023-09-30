@@ -33,16 +33,6 @@ const homepage = () => {
     });
     bookBtn.textContent = 'Book A Table';
 
-    // appendToParent(welcome, title);
-    // appendToParent(welcome, intro);
-
-    // appendToParent(header, welcome)
-    // appendToParent(header, bookBtn)
-
-    // appendToParent(home, header)
-
-    // appendToParent(content, home)
-
     welcome.appendChild(title);
     welcome.appendChild(intro);
 
@@ -56,5 +46,6 @@ const homepage = () => {
 }
 
 export const generateHomepage = () => {
+    document.title = "Kaffycina"
     homepage();
 }
