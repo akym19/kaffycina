@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Oswald:wght@700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Oswald:wght@700&family=Poppins&family=Roboto&display=swap');
 
 :root {
     --primary-color: #684711;
@@ -52,7 +51,7 @@ nav ul li button {
     background-color: var(--primary-color);
     border: none;
     border-radius: 30px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: clamp(8px, 7.5vw, 25px);
     font-weight: 700;
     width: fit-content;
@@ -130,7 +129,7 @@ nav ul li:nth-child(n+2):nth-child(-n+4) a:hover::after{
 }
 
 .container-welcome .intro {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: clamp(8px, 7.5vw, 20px);
     color: var(--white-font);
     text-align: justify;
@@ -147,7 +146,7 @@ button#bookTable {
     background-color: var(--primary-color);
     border: none;
     border-radius: 30px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 30px;
     font-weight: 700;
     width: fit-content;
@@ -259,4 +258,60 @@ button#bookTable:hover {
 
 .pizza-card:last-child {
     border-bottom: none;
+}
+
+/* CONTACT US PAGE STYLES */
+
+/* * {
+    outline: black solid 1px;
+} */
+
+#contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-form {
+    width: 50vw;
+    height: 60vh;
+    background-color: var(--white-font);
+    position: relative;
+    top: 130px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#info h1 {
+    color: var(--white-font);
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(25px, 15vw, 50px);
+}
+
+.details p {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(8px, 7.5vw, 20px);
+    color: var(--white-font);
+}
+
+.icon {
+    height: 35px;
+    width: 35px;
+}
+
+#info {
+    background-color: var(--primary-color);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    width: 25vw;
+    height: 40vh;
+    padding: 25px;
+    /* align-items: center; */
 }

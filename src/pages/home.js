@@ -1,4 +1,4 @@
-import { createElem } from "../functions";
+import { createElem } from "./functions";
 
 const homepage = () => {
     const body = document.body;
