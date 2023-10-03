@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: #684711;
+    --secondary-color: #d8aa5f;
     --dark-font: #0c0c0f;
     --white-font: #f5f5fa;
 }
@@ -19,7 +20,11 @@ html {
 body {
     height: 100vh;
     width: auto;
+}
+
+#home-container {
     background: url('../images/homepage.jpg') no-repeat fixed center/cover;
+    height: calc(100vh - 95px);
 }
 
 /* NAVIGATION BAR STYLES */
@@ -30,6 +35,9 @@ nav {
     background: var(--dark-font);
     position: sticky;
     top: 0;
+    height: 95px;
+    display: grid;
+    align-items: center;
 }
 
 nav ul {
@@ -262,56 +270,51 @@ button#bookTable:hover {
 
 /* CONTACT US PAGE STYLES */
 
-/* * {
-    outline: black solid 1px;
-} */
-
 #contact-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: calc(100vh - 95px);
+    background-color: var(--secondary-color);
 }
 
-#contact-form {
-    width: 50vw;
+#contact-main {
+    outline: solid 1px black;
+    width: 70vw;
     height: 60vh;
-    background-color: var(--white-font);
     position: relative;
-    top: 130px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#info {
+    outline: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    padding: 50px;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    transform: translate(-40%, -50%);
+}
+
+#info h1 {
+    font-family: 'Oswald', sans-serif;
+    color: var(--white-font);
 }
 
 .details {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
 }
 
-#info h1 {
-    color: var(--white-font);
-    font-family: 'Oswald', sans-serif;
-    font-size: clamp(25px, 15vw, 50px);
+.details img {
+    height: 50px;
 }
 
 .details p {
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(8px, 7.5vw, 20px);
     color: var(--white-font);
-}
-
-.icon {
-    height: 35px;
-    width: 35px;
-}
-
-#info {
-    background-color: var(--primary-color);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 50px;
-    width: 25vw;
-    height: 40vh;
-    padding: 25px;
-    /* align-items: center; */
+    font-size: clamp(8px, 7.5vw, 20px);;
 }
