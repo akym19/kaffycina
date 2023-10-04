@@ -1,4 +1,4 @@
-export const createElem = (type, attributes ={}) => {
+export const createElem = (type, attributes = {}) => {
     const elem = document.createElement(type);
 
     for (const attr in attributes) {

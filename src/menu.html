@@ -1,268 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <script type="module" src="./menu.js" defer></script>
-</head>
-<body>
-    <nav id="navbar">
-        <ul>
-            <li id="logo"><a href="#">
-                <img src="../src/images/logo.jpg" alt="Kaffycina Logo">
-            </a></li>
-            <li id="home"><a href="#">Home</a></li>
-            <li id="menu"><a href="#">Menu</a></li>
-            <li id="contact"><a href="#">Contact Us</a></li>
-            <li id="onlineOrder">
-                <a href="#">
-                    <button>Order Online</button>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <div id="content">
-        <div id="menu-container">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menu</title>
+        <link rel="stylesheet" href="./css/styles.css" />
+        <script type="module" src="./menu.js" defer></script>
+    </head>
+    <body>
+        <nav id="navbar">
+            <ul>
+                <li id="logo">
+                    <a href="#">
+                        <img
+                            src="../src/images/logo.jpg"
+                            alt="Kaffycina Logo"
+                        />
+                    </a>
+                </li>
+                <li id="home"><a href="#">Home</a></li>
+                <li id="menu"><a href="#">Menu</a></li>
+                <li id="contact"><a href="#">Contact Us</a></li>
+                <li id="onlineOrder">
+                    <a href="#">
+                        <button>Order Online</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content">
+            <div id="menu-container">
+                <div id="appetizers" class="section">
+                    <div id="appe-img" class="menu-img">
+                        <img
+                            src="../src/images/bruschetta.jpg"
+                            alt="Bruschetta"
+                            loading="lazy"
+                        />
+                    </div>
 
-            <div id="appetizers" class="section">
+                    <div id="appe-menu" class="menu-card">
+                        <div id="appe-heading">
+                            <div class="menu-illus">
+                                <img
+                                    src="../src/images/breads.png"
+                                    alt="Appetizers Illustration"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <h1>Appetizers</h1>
+                        </div>
 
-                <div id="appe-img" class="menu-img">
-                    <img src="../src/images/bruschetta.jpg" alt="Bruschetta" loading="lazy">
+                        <div class="food-card appe-card">
+                            <div class="food">
+                                <h2 class="name">Bruschetta</h2>
+                                <p class="desc">
+                                    Toasted garlic with diced tomatoes, balsamic
+                                    vinegar, basil and cheese.
+                                </p>
+                            </div>
+                            <p class="price">$8.25</p>
+                        </div>
+
+                        <div class="food-card appe-card">
+                            <div class="food">
+                                <h2 class="name">Fried Mozarella</h2>
+                                <p class="desc">
+                                    Homemade fried cheese served with marinara
+                                    sauce.
+                                </p>
+                            </div>
+                            <p class="price">$8.00</p>
+                        </div>
+
+                        <div class="food-card appe-card">
+                            <div class="food">
+                                <h2 class="name">Antipasto Originale</h2>
+                                <p class="desc">
+                                    Original Italian cuts, salami, prosciutto,
+                                    ham, fresh mozzarella, tomatoes, artichokes
+                                    and garlic oil eggplant.
+                                </p>
+                            </div>
+                            <p class="price">$17.25</p>
+                        </div>
+
+                        <div class="food-card appe-card">
+                            <div class="food">
+                                <h2 class="name">Shrimp Scampi</h2>
+                                <p class="desc">
+                                    Small shrimp sauteed with garlic white wine
+                                    and heavy cream served over toasted bread.
+                                </p>
+                            </div>
+                            <p class="price">$10.50</p>
+                        </div>
+
+                        <div class="food-card appe-card">
+                            <div class="food">
+                                <h2 class="name">Melanzane Caprese</h2>
+                                <p class="desc">
+                                    Fried eggplant with mozzarella, tomato and
+                                    basil, lightly baked in the oven.
+                                </p>
+                            </div>
+                            <p class="price">$10.50</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div id="appe-menu" class="menu-card">
-
-                    <div id="appe-heading">
-                        <div class="menu-illus">
-                            <img src="../src/images/breads.png" alt="Appetizers Illustration" loading="lazy">
-                        </div>
-                        <h1>Appetizers</h1>
+                <div id="soups_salads" class="section">
+                    <div id="sousa-img" class="menu-img">
+                        <img
+                            src="../src/images/sousa.jpg"
+                            alt="Salad"
+                            loading="lazy"
+                        />
                     </div>
 
-                    <div class="food-card appe-card">
-                        <div class="food">
-                            <h2 class="name">Bruschetta</h2>
-                            <p class="desc">Toasted garlic with diced tomatoes, balsamic vinegar, basil and cheese.</p>
+                    <div id="sousa-menu" class="menu-card">
+                        <div id="sousa-heading">
+                            <div class="menu-illus">
+                                <img
+                                    src="../src/images/salad.png"
+                                    alt="Salad Illustration"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <h1>Soups and Salads</h1>
                         </div>
-                        <p class="price">$8.25</p>
-                    </div>
 
-                    <div class="food-card appe-card">
-                        <div class="food">
-                            <h2 class="name">Fried Mozarella</h2>
-                            <p class="desc">Homemade fried cheese served with marinara sauce.</p>
+                        <div class="food-card sousa-card">
+                            <div class="food">
+                                <h2 class="name">Tuscany</h2>
+                                <p class="desc">
+                                    Baby spinach, dried cranberries, almonds &
+                                    blue cheese crumbs in a citrus vinegar
+                                    dressing.
+                                </p>
+                            </div>
+                            <p class="price">$9.45</p>
                         </div>
-                        <p class="price">$8.00</p>
-                    </div>
 
-                    <div class="food-card appe-card">
-                        <div class="food">
-                            <h2 class="name">Antipasto Originale</h2>
-                            <p class="desc">Original Italian cuts, salami, prosciutto, ham, fresh mozzarella, tomatoes, artichokes and garlic oil eggplant.</p>
+                        <div class="food-card sousa-card">
+                            <div class="food">
+                                <h2 class="name">Soup of the Day</h2>
+                                <p class="desc">
+                                    Homemade soup. Ask your server.
+                                </p>
+                            </div>
+                            <p class="price">$6.99</p>
                         </div>
-                        <p class="price">$17.25</p>
-                    </div>
 
-                    <div class="food-card appe-card">
-                        <div class="food">
-                            <h2 class="name">Shrimp Scampi</h2>
-                            <p class="desc">Small shrimp sauteed with garlic white wine and heavy cream served over toasted bread.</p>
+                        <div class="food-card sousa-card">
+                            <div class="food">
+                                <h2 class="name">Caprese</h2>
+                                <p class="desc">
+                                    Sliced fresh mozzarella, fresh tomatoes with
+                                    basil and balsamic vinaigrette.
+                                </p>
+                            </div>
+                            <p class="price">$10.50</p>
                         </div>
-                        <p class="price">$10.50</p>
-                    </div>
 
-                    <div class="food-card appe-card">
-                        <div class="food">
-                            <h2 class="name">Melanzane Caprese</h2>
-                            <p class="desc">Fried eggplant with mozzarella, tomato and basil, lightly baked in the oven.</p>
+                        <div class="food-card sousa-card">
+                            <div class="food">
+                                <h2 class="name">Cesare</h2>
+                                <p class="desc">
+                                    Romaine, croutons, parmesan cheese, ceasar
+                                    dressing.
+                                </p>
+                            </div>
+                            <p class="price">$8.45</p>
                         </div>
-                        <p class="price">$10.50</p>
-                    </div>
 
+                        <div class="food-card sousa-card">
+                            <div class="food">
+                                <h2 class="name">Della Casa</h2>
+                                <p class="desc">
+                                    Mix greens, onions, tomatoes, cucumbers,
+                                    Kalamata olives and white beans.
+                                </p>
+                            </div>
+                            <p class="price">$8.99</p>
+                        </div>
+                    </div>
                 </div>
 
+                <div id="pasta" class="section">
+                    <div id="pasta-img" class="menu-img">
+                        <img
+                            src="../src/images/pasta.jpg"
+                            alt="Pasta"
+                            loading="lazy"
+                        />
+                    </div>
+
+                    <div id="pasta-menu" class="menu-card">
+                        <div id="pasta-heading">
+                            <div class="menu-illus">
+                                <img
+                                    src="../src/images/spaghetti.png"
+                                    alt="Pasta Illustration"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <h1>Pasta</h1>
+                        </div>
+
+                        <div class="food-card pasta-card">
+                            <div class="food">
+                                <h2 class="name">Bolognese</h2>
+                                <p class="desc">Homemade meat sauce.</p>
+                            </div>
+                            <p class="price">$14.25</p>
+                        </div>
+
+                        <div class="food-card pasta-card">
+                            <div class="food">
+                                <h2 class="name">Carbonara</h2>
+                                <p class="desc">
+                                    Creamy sauce with onions, pancetta and egg
+                                    yolk.
+                                </p>
+                            </div>
+                            <p class="price">$14.50</p>
+                        </div>
+
+                        <div class="food-card pasta-card">
+                            <div class="food">
+                                <h2 class="name">Patriota</h2>
+                                <p class="desc">
+                                    Tomatoes, basil, garlic and fresh mozzarella
+                                    in white wine sauce.
+                                </p>
+                            </div>
+                            <p class="price">$15.25</p>
+                        </div>
+
+                        <div class="food-card pasta-card">
+                            <div class="food">
+                                <h2 class="name">Aglio E Olio</h2>
+                                <p class="desc">
+                                    Garlic oil & crushed red pepper in a white
+                                    wine sauce.
+                                </p>
+                            </div>
+                            <p class="price">$12.25</p>
+                        </div>
+
+                        <div class="food-card pasta-card">
+                            <div class="food">
+                                <h2 class="name">Fra Diaviolo</h2>
+                                <p class="desc">
+                                    Choice of pasta with garlic spicy plum
+                                    tomato sauce.
+                                </p>
+                            </div>
+                            <p class="price">$15.25</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="pizza" class="section">
+                    <div id="pizza-img" class="menu-img">
+                        <img
+                            src="../src/images/pizza.jpg"
+                            alt="Pizza"
+                            loading="lazy"
+                        />
+                    </div>
+
+                    <div id="pizza-menu" class="menu-card">
+                        <div id="pizza-heading">
+                            <div class="menu-illus">
+                                <img
+                                    src="../src/images/pizza.png"
+                                    alt="Pizza Illustration"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <h1>Pizza</h1>
+                        </div>
+
+                        <div class="food-card pizza-card">
+                            <div class="food">
+                                <h2 class="name">Pepperoni & Basil</h2>
+                                <p class="desc">
+                                    Ezzo's pepperoni, burrata, basil, red sauce.
+                                </p>
+                            </div>
+                            <p class="price">$17.25</p>
+                        </div>
+
+                        <div class="food-card pizza-card">
+                            <div class="food">
+                                <h2 class="name">Sausage</h2>
+                                <p class="desc">
+                                    Sausage, giardiniera, mozzarella basil, red
+                                    sauce.
+                                </p>
+                            </div>
+                            <p class="price">$15.50</p>
+                        </div>
+
+                        <div class="food-card pizza-card">
+                            <div class="food">
+                                <h2 class="name">Miso Mushroom</h2>
+                                <p class="desc">
+                                    Shiitake mushrooms, black garlic, miso,
+                                    onions, green onions, mozzarella.
+                                </p>
+                            </div>
+                            <p class="price">$15.25</p>
+                        </div>
+
+                        <div class="food-card pizza-card">
+                            <div class="food">
+                                <h2 class="name">Cheese</h2>
+                                <p class="desc">
+                                    Classic cheese pizza with burrata, parmesan,
+                                    basil, red sauce (vegetarian).
+                                </p>
+                            </div>
+                            <p class="price">$12.25</p>
+                        </div>
+
+                        <div class="food-card pizza-card">
+                            <div class="food">
+                                <h2 class="name">Fig & Pig</h2>
+                                <p class="desc">
+                                    Caramelized onions, figs, confit pork, good
+                                    balsamic.
+                                </p>
+                            </div>
+                            <p class="price">$15.25</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div id="soups_salads" class="section">
-                
-                <div id="sousa-img" class="menu-img">
-                    <img src="../src/images/sousa.jpg" alt="Salad" loading="lazy">
-                </div>
-
-                <div id="sousa-menu" class="menu-card">
-
-                    <div id="sousa-heading">
-                        <div class="menu-illus">
-                            <img src="../src/images/salad.png" alt="Salad Illustration" loading="lazy">
-                        </div>
-                        <h1>Soups and Salads</h1>
-                    </div>
-
-                    <div class="food-card sousa-card">
-                        <div class="food">
-                            <h2 class="name">Tuscany</h2>
-                            <p class="desc">Baby spinach, dried cranberries, almonds & blue cheese crumbs in a citrus vinegar dressing.</p>
-                        </div>
-                        <p class="price">$9.45</p>
-                    </div>
-
-                    <div class="food-card sousa-card">
-                        <div class="food">
-                            <h2 class="name">Soup of the Day</h2>
-                            <p class="desc">Homemade soup. Ask your server.</p>
-                        </div>
-                        <p class="price">$6.99</p>
-                    </div>
-
-                    <div class="food-card sousa-card">
-                        <div class="food">
-                            <h2 class="name">Caprese</h2>
-                            <p class="desc">Sliced fresh mozzarella, fresh tomatoes with basil and balsamic vinaigrette.</p>
-                        </div>
-                        <p class="price">$10.50</p>
-                    </div>
-
-                    <div class="food-card sousa-card">
-                        <div class="food">
-                            <h2 class="name">Cesare</h2>
-                            <p class="desc">Romaine, croutons, parmesan cheese, ceasar dressing.</p>
-                        </div>
-                        <p class="price">$8.45</p>
-                    </div>
-
-                    <div class="food-card sousa-card">
-                        <div class="food">
-                            <h2 class="name">Della Casa</h2>
-                            <p class="desc">Mix greens, onions, tomatoes, cucumbers, Kalamata olives and white beans.</p>
-                        </div>
-                        <p class="price">$8.99</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div id="pasta" class="section">
-
-                <div id="pasta-img" class="menu-img">
-                    <img src="../src/images/pasta.jpg" alt="Pasta" loading="lazy">
-                </div>
-
-                <div id="pasta-menu" class="menu-card">
-
-                    <div id="pasta-heading">
-                        <div class="menu-illus">
-                            <img src="../src/images/spaghetti.png" alt="Pasta Illustration" loading="lazy">
-                        </div>
-                        <h1>Pasta</h1>
-                    </div>
-
-                    <div class="food-card pasta-card">
-                        <div class="food">
-                            <h2 class="name">Bolognese</h2>
-                            <p class="desc">Homemade meat sauce.</p>
-                        </div>
-                        <p class="price">$14.25</p>
-                    </div>
-
-                    <div class="food-card pasta-card">
-                        <div class="food">
-                            <h2 class="name">Carbonara</h2>
-                            <p class="desc">Creamy sauce with onions, pancetta and egg yolk.</p>
-                        </div>
-                        <p class="price">$14.50</p>
-                    </div>
-
-                    <div class="food-card pasta-card">
-                        <div class="food">
-                            <h2 class="name">Patriota</h2>
-                            <p class="desc">Tomatoes, basil, garlic and fresh mozzarella in white wine sauce.</p>
-                        </div>
-                        <p class="price">$15.25</p>
-                    </div>
-
-                    <div class="food-card pasta-card">
-                        <div class="food">
-                            <h2 class="name">Aglio E Olio</h2>
-                            <p class="desc">Garlic oil & crushed red pepper in a white wine sauce.</p>
-                        </div>
-                        <p class="price">$12.25</p>
-                    </div>
-
-                    <div class="food-card pasta-card">
-                        <div class="food">
-                            <h2 class="name">Fra Diaviolo</h2>
-                            <p class="desc">Choice of pasta with garlic spicy plum tomato sauce.</p>
-                        </div>
-                        <p class="price">$15.25</p>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div id="pizza" class="section">
-                
-                <div id="pizza-img" class="menu-img">
-                    <img src="../src/images/pizza.jpg" alt="Pizza" loading="lazy">
-                </div>
-
-                <div id="pizza-menu" class="menu-card">
-
-                    <div id="pizza-heading">
-                        <div class="menu-illus">
-                            <img src="../src/images/pizza.png" alt="Pizza Illustration" loading="lazy">
-                        </div>
-                        <h1>Pizza</h1>
-                    </div>
-
-                    <div class="food-card pizza-card">
-                        <div class="food">
-                            <h2 class="name">Pepperoni  & Basil</h2>
-                            <p class="desc">Ezzo's pepperoni, burrata, basil, red sauce.</p>
-                        </div>
-                        <p class="price">$17.25</p>
-                    </div>
-
-                    <div class="food-card pizza-card">
-                        <div class="food">
-                            <h2 class="name">Sausage</h2>
-                            <p class="desc">Sausage, giardiniera, mozzarella basil, red sauce.</p>
-                        </div>
-                        <p class="price">$15.50</p>
-                    </div>
-
-                    <div class="food-card pizza-card">
-                        <div class="food">
-                            <h2 class="name">Miso Mushroom</h2>
-                            <p class="desc">Shiitake mushrooms, black garlic, miso, onions, green onions, mozzarella.</p>
-                        </div>
-                        <p class="price">$15.25</p>
-                    </div>
-
-                    <div class="food-card pizza-card">
-                        <div class="food">
-                            <h2 class="name">Cheese</h2>
-                            <p class="desc">Classic cheese pizza with burrata, parmesan, basil, red sauce (vegetarian).</p>
-                        </div>
-                        <p class="price">$12.25</p>
-                    </div>
-
-                    <div class="food-card pizza-card">
-                        <div class="food">
-                            <h2 class="name">Fig & Pig</h2>
-                            <p class="desc">Caramelized onions, figs, confit pork, good balsamic.</p>
-                        </div>
-                        <p class="price">$15.25</p>
-                    </div>
-
-                </div>
-
-            </div>
-
         </div>
-    </div>
-</body>
+    </body>
 </html>
