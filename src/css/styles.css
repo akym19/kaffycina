@@ -274,7 +274,6 @@ button#bookTable:hover {
 }
 
 #contact-main {
-    outline: solid 1px black;
     width: 70vw;
     height: 80vh;
     position: relative;
@@ -284,26 +283,31 @@ button#bookTable:hover {
 }
 
 #info {
-    outline: solid 1px black;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 50px;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     background-color: var(--primary-color);
     position: absolute;
     height: 60vh;
     top: 15%;
+    box-shadow: 14px 14px 39px #a6a6a6;
 }
 
 #info h1 {
     font-family: "Oswald", sans-serif;
     color: var(--white-font);
+    width: fit-content;
 }
 
 .details {
     display: flex;
     align-items: center;
     gap: 25px;
+    width: fit-content;
 }
 
 .details img {
@@ -349,7 +353,7 @@ form h1 {
 form p {
     font-family: "Poppins", sans-serif;
     color: var(--secondary-color);
-    font-size: clamp(8px, 7.5vw, 15px);
+    font-size: clamp(8px, 7.5vw, 1.1rem);
 }
 
 form button {
@@ -366,7 +370,71 @@ form button {
 }
 
 form button:hover {
-    background-color: var(--white-font);
+    background-color: var(--secondary-color);
     color: var(--dark-font);
     cursor: pointer;
+}
+
+#input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+    font-family: "Poppins", sans-serif;
+    width: 30vw;
+    height: 3em;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    border: gold solid 1px;
+    padding: 10px;
+}
+
+.input-wrapper:last-child textarea {
+    height: 8em;
+    resize: none;
+}
+
+label {
+    opacity: 0.5;
+    width: fit-content;
+    font-size: 1.2rem;
+    transform: translate(10px, 12px);
+    transition: all 0.5s;
+    background-color: var(--white-font);
+    position: absolute;
+}
+
+input:focus + label,
+input:valid + label,
+textarea:focus + label {
+    transform: translate(7px, -10px);
+    opacity: 1;
+    font-size: 1rem;
+}
+
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+    border: solid 2px gold;
+    outline: none;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: solid 2px rgb(223, 39, 39);
+}
+
+input:not(:focus):not(:placeholder-shown):invalid + label {
+    opacity: 0;
 }

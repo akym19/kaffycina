@@ -34,7 +34,7 @@
                         <div id="address" class="details">
                             <img
                                 src="../src/images/location.png"
-                                alt="Adress"
+                                alt="Address"
                             />
                             <p>This Place, This City</p>
                         </div>
@@ -83,7 +83,7 @@
                                         type="text"
                                         name="full-name"
                                         id="full-name"
-                                        placeholder="Your Name"
+                                        placeholder=""
                                         required
                                     />
                                     <label for="full-name">Your Name</label>
@@ -93,28 +93,25 @@
                                         type="email"
                                         name="mail"
                                         id="mail"
-                                        placeholder="Your E-mail"
+                                        placeholder=""
                                         required
                                     />
                                     <label for="mail">Your E-mail</label>
                                 </div>
                                 <div class="input-wrapper">
-                                    <input
-                                        type="text"
+                                    <textarea
                                         name="message"
                                         id="message"
-                                        placeholder="Type your message here..."
-                                        required
-                                    />
-                                    <label for="message"
-                                        >Type your message here...</label
-                                    >
+                                        cols="30"
+                                        rows="4"
+                                        maxlength="176"
+                                    ></textarea>
+                                    <label for="message">Your Message</label>
                                 </div>
                             </div>
                             <button>Send</button>
                         </form>
                     </div>
-                    <div id="form-container"></div>
                 </div>
             </div>
         </div>
