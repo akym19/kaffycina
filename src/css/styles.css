@@ -282,7 +282,7 @@ button#bookTable:hover {
     transform: translate(-50%, -50%);
 }
 
-#info {
+#info-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -297,7 +297,7 @@ button#bookTable:hover {
     box-shadow: 14px 14px 39px #a6a6a6;
 }
 
-#info h1 {
+#info-container h1 {
     font-family: "Oswald", sans-serif;
     color: var(--white-font);
     width: fit-content;

@@ -56,13 +56,13 @@ const contactMain = createElem("div", {
 });
 
 export const generateInfoSection = () => {
-    const infoMain = createElem("div", {
-        id: "info",
+    const infoContainer = createElem("div", {
+        id: "info-container",
     });
     const infoHeader = createElem("h1", {});
     infoHeader.textContent = "Contact Us";
 
-    infoMain.appendChild(infoHeader);
+    infoContainer.appendChild(infoHeader);
 
     infos.forEach((info) => {
         const infoElem = createElem("div", {
@@ -80,11 +80,103 @@ export const generateInfoSection = () => {
 
         infoElem.appendChild(infoIcon);
         infoElem.appendChild(detail);
-        infoMain.appendChild(infoElem);
+        infoContainer.appendChild(infoElem);
     });
 
-    contactMain.appendChild(infoMain);
+    contactMain.appendChild(infoContainer);
     contactContainer.appendChild(contactMain);
     content.appendChild(contactContainer);
     body.appendChild(content);
+};
+
+const generateContactForm = () => {
+    const contactFormContainer = createElem("div", {
+        id: "contact-form-container",
+    });
+
+    const contactForm = createElem("form", {
+        action: "#",
+        id: "contact-form",
+        method: "post",
+    });
+
+    const contactHeading = createElem("div", {
+        id: "contact-heading",
+    });
+
+    const contactHeadingH1 = createElem("h1", {});
+    contactHeadingH1.textContent = "Get in touch with us!";
+
+    const contactHeadingP = createElem("p", {});
+    contactHeadingP.textContent =
+        "Complaints? Praises? Suggestions? Feel free to drop us a message below!";
+
+    contactHeading.appendChild(contactHeadingH1);
+    contactHeading.appendChild(contactHeadingP);
+    contactForm.appendChild(contactHeading);
+
+    // *create form input boxes
+    const inputContainer = createElem("div", {
+        id: "input-container",
+    });
+
+    const inputWrapperName = createElem("div", {
+        class: "input-wrapper",
+    });
+    const inputName = createElem("input", {
+        type: "text",
+        name: "full-name",
+        id: "full-name",
+        placeholder: "",
+        required: "",
+    });
+
+    const inputNameLabel = createElem("label", {
+        for: "full-name",
+    });
+    inputNameLabel.textContent = "Your Name";
+
+    inputWrapperName.appendChild(inputName);
+    inputWrapperName.appendChild(inputNameLabel);
+    inputContainer.appendChild(inputWrapperName);
+
+    const inputWrapperMail = createElem("div", {
+        class: "input-wrapper",
+    });
+    const inputMail = createElem("input", {
+        type: "email",
+        name: "mail",
+        id: "mail",
+        placeholder: "",
+        required: "",
+    });
+
+    const inputMailLabel = createElem("label", {
+        for: "mail",
+    });
+    inputNameLabel.textContent = "Your E-Mail";
+
+    inputWrapperMail.appendChild(inputMail);
+    inputWrapperMail.appendChild(inputMailLabel);
+    inputContainer.appendChild(inputWrapperMail);
+
+    const inputWrapperTextArea = createElem("div", {
+        class: "input-wrapper",
+    });
+    const inputTextArea = createElem("textarea", {
+        name: "message",
+        id: "message",
+        cols: "30",
+        rows: "4",
+        maxlength: "176",
+    });
+
+    const inputTextAreaLabel = createElem("label", {
+        for: "message",
+    });
+    inputTextAreaLabel.textContent = "Your Message";
+
+    inputWrapperTextArea.appendChild(inputTextArea);
+    inputWrapperTextArea.appendChild(inputTextAreaLabel);
+    inputContainer.appendChild(inputWrapperTextArea);
 };
