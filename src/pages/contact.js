@@ -55,7 +55,7 @@ const contactMain = createElem("div", {
     id: "contact-main",
 });
 
-export const generateInfoSection = () => {
+const generateInfoSection = () => {
     const infoContainer = createElem("div", {
         id: "info-container",
     });
@@ -84,9 +84,6 @@ export const generateInfoSection = () => {
     });
 
     contactMain.appendChild(infoContainer);
-    contactContainer.appendChild(contactMain);
-    content.appendChild(contactContainer);
-    body.appendChild(content);
 };
 
 const generateContactForm = () => {
@@ -154,7 +151,7 @@ const generateContactForm = () => {
     const inputMailLabel = createElem("label", {
         for: "mail",
     });
-    inputNameLabel.textContent = "Your E-Mail";
+    inputMailLabel.textContent = "Your E-Mail";
 
     inputWrapperMail.appendChild(inputMail);
     inputWrapperMail.appendChild(inputMailLabel);
@@ -179,4 +176,21 @@ const generateContactForm = () => {
     inputWrapperTextArea.appendChild(inputTextArea);
     inputWrapperTextArea.appendChild(inputTextAreaLabel);
     inputContainer.appendChild(inputWrapperTextArea);
+
+    const contactBtn = createElem("button", {});
+    contactBtn.textContent = "Send Message";
+
+    contactForm.appendChild(inputContainer);
+    contactForm.appendChild(contactBtn);
+    contactFormContainer.appendChild(contactForm);
+    contactMain.appendChild(contactFormContainer);
+};
+
+export const generateContactPage = () => {
+    document.title = "Contact Us";
+    generateInfoSection();
+    generateContactForm();
+    contactContainer.appendChild(contactMain);
+    content.appendChild(contactContainer);
+    body.appendChild(content);
 };

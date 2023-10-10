@@ -1,7 +1,7 @@
 import { generateHomepage } from "./pages/home.js";
 import { generateMenu } from "./pages/menu.js";
 import { generateNavbar } from "./pages/navbar.js";
-import { generateInfoSection } from "./pages/contact.js";
+import { generateContactPage } from "./pages/contact.js";
 import "./css/styles.css";
 
 generateNavbar();
@@ -27,5 +27,5 @@ menu.addEventListener("click", () => {
 contact.addEventListener("click", () => {
     body.textContent = "";
     generateNavbar();
-    generateInfoSection();
+    generateContactPage();
 });

@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    height: 100vh;
+    /* height: 100vh; */
     width: auto;
 }
 
@@ -128,7 +128,7 @@ nav ul li:nth-child(n + 2):nth-child(-n + 4) a:hover::after {
 }
 
 .container-welcome h1 {
-    font-size: clamp(50px, 15vw, 180px);
+    font-size: clamp(50px, 10vw, 150px);
     font-family: "Oswald", sans-serif;
     color: var(--primary-color);
     padding-left: 10px;
@@ -357,9 +357,9 @@ form p {
 }
 
 form button {
-    padding: 10px 50px;
-    color: var(--white-font);
-    background-color: var(--primary-color);
+    padding: 10px 20px;
+    color: var(--dark-font);
+    background-color: var(--secondary-color);
     border: none;
     border-radius: 30px;
     font-family: "Poppins", sans-serif;
@@ -370,8 +370,8 @@ form button {
 }
 
 form button:hover {
-    background-color: var(--secondary-color);
-    color: var(--dark-font);
+    background-color: var(--primary-color);
+    color: var(--white-font);
     cursor: pointer;
 }
 
@@ -431,10 +431,12 @@ textarea:focus-visible {
     outline: none;
 }
 
-input:not(:focus):not(:placeholder-shown):invalid {
+input:not(:focus):not(:placeholder-shown):invalid,
+textarea:not(:focus):not(:placeholder-shown):invalid {
     border: solid 2px rgb(223, 39, 39);
 }
 
-input:not(:focus):not(:placeholder-shown):invalid + label {
+input:not(:focus):not(:placeholder-shown):invalid + label,
+textarea:not(:focus):not(:placeholder-shown):invalid + label {
     opacity: 0;
 }
