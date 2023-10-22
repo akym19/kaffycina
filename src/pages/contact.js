@@ -3,26 +3,26 @@ import { createElem } from "./functions";
 const infos = [
     {
         id: "address",
-        imgSrc: "/images/location.png",
+        imgSrc: "./images/location.png",
         altImgAttr: "Address",
         text: "This Place, This City",
     },
     {
         id: "phone-num",
-        imgSrc: "/images/telephone.png",
+        imgSrc: "./images/telephone.png",
         altImgAttr: "Telephone",
         text: "+63 927 765 2692",
     },
     {
         id: "facebook",
-        imgSrc: "/images/facebook.png",
+        imgSrc: "./images/facebook.png",
         altImgAttr: "Facebook",
         href: "https://www.facebook.com/profile.php?id=100063954195673",
         text: "KAFFYcina",
     },
     {
         id: "instagram",
-        imgSrc: "/images/instagram.png",
+        imgSrc: "./images/instagram.png",
         altImgAttr: "Instagram",
         href: "https://instagram.com/kaffycina?igshid=ZGUzMzM3NWJiOQ%3D%3D",
         text: "@KAFFYcina",
