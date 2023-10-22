@@ -14,7 +14,7 @@ const aLogo = createElem("a", {
     href: "#",
 });
 const imgLogo = createElem("img", {
-    src: "../src/images/logo.jpg",
+    src: "../../dist/images/logo.jpg",
     alt: "Kaffycina Logo",
 });
 
