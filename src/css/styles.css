@@ -23,8 +23,7 @@ body {
 }
 
 #home-container {
-    background: url("../../dist/images/homepage.jpg") no-repeat fixed
-        center/cover;
+    background: url("/images/homepage.jpg") no-repeat fixed center/cover;
     height: calc(100vh - 95px);
 }
 

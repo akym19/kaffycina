@@ -4,8 +4,8 @@ const sections = [
     {
         id: "appetizers",
         name: "Appetizers",
-        sideImg: "../../dist/images/bruschetta.jpg",
-        headingImg: "../../dist/images/breads.png",
+        sideImg: "/images/bruschetta.jpg",
+        headingImg: "/images/breads.png",
         items: [
             {
                 class: "appe-card",
@@ -48,8 +48,8 @@ const sections = [
     {
         id: "soups_salads",
         name: "Soups & Salads",
-        sideImg: "../../dist/images/sousa.jpg",
-        headingImg: "../../dist/images/salad.png",
+        sideImg: "/images/sousa.jpg",
+        headingImg: "/images/salad.png",
         items: [
             {
                 class: "sousa-card",
@@ -92,8 +92,8 @@ const sections = [
     {
         id: "pasta",
         name: "Pasta",
-        sideImg: "../../dist/images/pasta.jpg",
-        headingImg: "../../dist/images/spaghetti.png",
+        sideImg: "/images/pasta.jpg",
+        headingImg: "/images/spaghetti.png",
         items: [
             {
                 class: "pasta-card",
@@ -142,8 +142,8 @@ const sections = [
     {
         id: "pizza",
         name: "Pizza",
-        sideImg: "../../dist/images/pizza.jpg",
-        headingImg: "../../dist/images/pizza.png",
+        sideImg: "/images/pizza.jpg",
+        headingImg: "/images/pizza.png",
         items: [
             {
                 class: "pizza-card",
